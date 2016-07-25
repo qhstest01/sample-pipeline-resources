@@ -13,6 +13,12 @@ jobs:
       - echo 'this is on_success step of dv-man of type manifest'
     on_failure:
       - echo 'this is on_failure step of dv-man of type manifest'
+  
+  - name: box-man-vr
+    type: manifest
+    steps:
+      - IN: box-image
+        pull: false
       
   - name: box-dcl-vr
     type: dclDeploy
