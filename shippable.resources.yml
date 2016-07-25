@@ -1,7 +1,7 @@
 resources:
   - name: dv-image-vr
     type: image
-    integration: ric03uec-dh
+    integration: ship-dock12
     pointer:
       sourceName: "library/nginx"
     seed:
