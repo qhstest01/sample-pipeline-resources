@@ -1,0 +1,28 @@
+resources:
+  - name: dv-image-vr
+    type: image
+    integration: ric03uec-dh
+    pointer:
+      sourceName: "library/nginx"
+    seed:
+      versionName: latest
+
+  - name: dv-opts-vr
+    type: dockerOptions
+    version:
+      memory: 64
+      cpuShares: 256
+      portMappings:
+        - "80:80"
+
+  - name: dv-params-vr
+    type: params
+    version:
+      params:
+        MONGO_API_URL: "localhost:28017"
+
+ - name: env-dcl-vr
+    type: cluster
+    integration: dcl-test
+    pointer:
+     sourceName : "cluster-dcl"
