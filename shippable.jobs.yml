@@ -1,0 +1,23 @@
+jobs:
+  - name: dv-man-vr
+    type: manifest
+    steps:
+      - IN: dv-image-vr
+        pull: false
+      - IN: dv-opts-vr
+      - IN: dv-params-vr
+        applyTo:
+          - dv-image-vr
+      
+    on_success:
+      - echo 'this is on_success step of dv-man of type manifest'
+    on_failure:
+      - echo 'this is on_failure step of dv-man of type manifest'
+      
+  - name: box-dcl-vr
+    type: dclDeploy
+    steps:
+      - IN: box-man-vr
+      - IN: env-dcl-vr
+      - TASK: managed
+
