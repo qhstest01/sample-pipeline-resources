@@ -20,6 +20,15 @@ resources:
     version:
       params:
         MONGO_API_URL: "localhost:28017"
+        
+  - name: box-image
+    type: image
+    integration: ship-dock12
+    pointer:
+      sourceName: "shiphitchcock2/docker-node-test"
+    seed:
+      versionName: "alpha.1"
+
 
   - name: env-dcl-vr
     type: cluster
