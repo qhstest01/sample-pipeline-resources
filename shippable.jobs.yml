@@ -20,10 +20,4 @@ jobs:
       - IN: box-image
         pull: false
       
-  - name: box-dcl-vr
-    type: dclDeploy
-    steps:
-      - IN: box-man-vr
-      - IN: env-dcl-vr
-      - TASK: managed
-
+  
