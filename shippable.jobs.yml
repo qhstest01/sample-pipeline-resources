@@ -1,5 +1,5 @@
 jobs:
-  - name: dv-man-vr1
+  - name: dv-man-vr2
     type: manifest
     steps:
       - IN: dv-image-vr
