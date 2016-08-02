@@ -1,20 +1,20 @@
 jobs:
-  - name: dv-man-vr2-test
+  - name: dv-man-vr-test
     type: manifest
     steps:
-      - IN: dv-image-vr
+      - IN: dv-image-vr-test
         pull: false
-      - IN: dv-opts-vr
-      - IN: dv-params-vr
+      - IN: dv-opts-vr-test
+      - IN: dv-params-vr-test
         applyTo:
-          - dv-image-vr
+          - dv-image-vr-test
       
     on_success:
       - echo 'this is on_success step of dv-man of type manifest'
     on_failure:
       - echo 'this is on_failure step of dv-man of type manifest'
   
-  - name: box-man-vr2-test
+  - name: box-man-vr-test
     type: manifest
     steps:
       - IN: box-image
