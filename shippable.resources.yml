@@ -1,5 +1,5 @@
 resources:
-  - name: dv-image-vr
+  - name: dv-image-vr-test
     type: image
     integration: ship-dock12
     pointer:
@@ -7,7 +7,7 @@ resources:
     seed:
       versionName: latest
 
-  - name: dv-opts-vr
+  - name: dv-opts-vr-test
     type: dockerOptions
     version:
       memory: 64
@@ -15,13 +15,13 @@ resources:
       portMappings:
         - "80:80"
 
-  - name: dv-params-vr
+  - name: dv-params-vr-test
     type: params
     version:
       params:
         MONGO_API_URL: "localhost:28017"
         
-  - name: box-image
+  - name: box-image-vr-test
     type: image
     integration: ship-dock12
     pointer:
