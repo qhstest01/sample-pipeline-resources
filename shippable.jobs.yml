@@ -1,5 +1,5 @@
 jobs:
-  - name: dv-man-vr3
+  - name: dv-man-vr4
     type: manifest
     steps:
       - IN: dv-image-vr
@@ -14,7 +14,7 @@ jobs:
     on_failure:
       - echo 'this is on_failure step of dv-man of type manifest'
   
-  - name: box-man-vr
+  - name: box-man-vr4
     type: manifest
     steps:
       - IN: box-image
